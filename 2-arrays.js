@@ -65,7 +65,7 @@ function sortedUnion(arr1, arr2) {
         
     }
 
-    arr1.sort()
+    arr1.sort(function compare(a,b){return a-b})
 
     return arr1
 }
