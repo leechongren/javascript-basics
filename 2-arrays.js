@@ -28,16 +28,41 @@ assertEquals(sum([]),0);
 
 /* ---------------------- EXERCISE 2 ---------------------- */
 // Define a function that returns an array of even numbers
-function evenNumbersOnly(array) {
-    let evenArray = []
-    for (let index = 0; index < array.length; index++) {
-        if(array[index]%2===0){
-            evenArray.push(array[index])
-        }
+
+// For loop method
+
+// function evenNumbersOnly(array) {
+//     let evenArray = []
+//     for (let index = 0; index < array.length; index++) {
+//         if(array[index]%2===0){
+//             evenArray.push(array[index])
+//         }
         
-    }
-    return evenArray
+//     }
+//     return evenArray
+// }
+
+// Reduce method
+
+// function evenNumbersOnly(numbers){
+//     return numbers.reduce((acc,cur)=>{
+//         if(cur%2===0){
+//             acc.push(cur)
+//         }
+//     return acc
+
+//     },[])
+// }
+
+// Filter method
+
+function evenNumbersOnly(numbers){
+    const isEven = (n) => n%2 === 0
+
+    return numbers.filter(isEven)
 }
+
+
 
 // Assertions (do not change)
 assertEquals(evenNumbersOnly([1, 2, 3, 4]), [2, 4]);
