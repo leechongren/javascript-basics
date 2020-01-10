@@ -21,8 +21,17 @@ var books = [
 /* 1. Define a function listTitles(booksArray) that takes in an array of book objects
        and returns an array of titles (strings) */
 function listTitles(booksArray) {
+  let titles = []
 
+  booksArray.forEach(book => {
+    titles.push(book.title)
+  })
+  
+  return titles
 }
+
+  
+
 
 // Assertions (do not change)
 assertEquals(listTitles(books), ['The Road Ahead', 'Lord of the Rings', 'Harry Potter'])
@@ -41,7 +50,7 @@ assertEquals(listAuthors(books), ['Bill Gates', 'JRR Tolkkien', 'JK Rowling'])
        of book objects and returns an array of authors (strings) */
 
 function listValues(booksArray, key) {
-
+  return books.map(b=>b[key])
 }
 
 // Assertions (do not change)
