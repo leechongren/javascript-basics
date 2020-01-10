@@ -2,18 +2,29 @@ const assertEquals = require("./assert-helper");
 
 /* ---------------------- EXERCISE 1 ---------------------- */
 // Define a function that returns the sum of an array
-function sum(array) {
-    let sumOfArray = 0
-    for(let i = 0;i<array.length;i++){
-        sumOfArray += array[i]
-    }
+// function sum(array) {
+//     let sumOfArray = 0
+//     for(let i = 0;i<array.length;i++){
+//         sumOfArray += array[i]
+//     }
 
-    return sumOfArray
+//     return sumOfArray
+// }
+
+function sum(numbers){
+    return numbers.reduce(function reducer(accumulator,currentValue){
+        return accumulator + currentValue
+    },0)
 }
+
+
+
+
 
 // Assertions (do not change)
 assertEquals(sum([1, 2]), 3);
 assertEquals(sum([1, 2, 3, 4]), 10);
+assertEquals(sum([]),0);
 
 /* ---------------------- EXERCISE 2 ---------------------- */
 // Define a function that returns an array of even numbers
