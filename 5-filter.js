@@ -55,7 +55,9 @@ assertEquals(filterUnderagedPeople(people, 26), ["tim"]);
 // hint: you need to use the ...rest operator in the function's parameters
 
 function filterEmailsByDomain(domain,...emails) {
-  
+  return emails.filter(email=>{
+    return email.includes(domain)
+  })
 }
 
 let actual = filterEmailsByDomain(
