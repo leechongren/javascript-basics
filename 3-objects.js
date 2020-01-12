@@ -40,6 +40,9 @@ assertEquals(listTitles(books), ['The Road Ahead', 'Lord of the Rings', 'Harry P
        and returns an array of authors (strings) */
 
 function listAuthors(booksArray) {
+  return booksArray.map(book=>{
+    return book.author})
+
 
 }
 
@@ -61,6 +64,12 @@ assertEquals(listValues(books, 'title'), ['The Road Ahead', 'Lord of the Rings',
 
 function getAvailableBooks(booksArray) {
 
+
+  return booksArray.filter(book=>{
+  return book.isAvailable
+}).map(p=>{
+  return p.title
+})
 }
 
 // Assertions (do not change)
